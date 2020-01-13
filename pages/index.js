@@ -14,12 +14,22 @@ const Index = ({arrList, movieList})=>{
                     name="viewport"
                     content="initial-scale=1.0, width=device-width"
                     key="viewport"/>
-                <meta name="og:title" content={movieList[0].movieNm} />
-                <meta name="og:description" content={`이것은 영화의 리스트를 뭐시기 하는 것으로 1등은 ${movieList[0].movieNm}이 가져갔다`} />
+                <meta charset="UTF-8" ></meta>
+                <meta name="title" content={movieList[0].movieNm} />
+                <meta name="description" content={`이것은 영화의 리스트를 뭐시기 하는 것으로 1등은 ${movieList[0].movieNm}이 가져갔다`} />
                 <meta name="keyword" content={movieList.map((el)=> {return el.movieNm})} />
-                <meta name="og:image" content="https://i.ytimg.com/vi/casKW6T63Ko/maxresdefault.jpg" />
-                <meta name="og:url" content="http://localhost:8081" />    
+                <meta name="image" content="https://i.ytimg.com/vi/casKW6T63Ko/maxresdefault.jpg" />
+                <meta name="url" content="http://localhost:8081" />    
+
                 <meta name="twitter:card" content="summary" />
+                <meta property="og:title" content={movieList[0].movieNm} />
+                <meta property="og:description" content={`이것은 영화의 리스트를 뭐시기 하는 것으로 1등은 ${movieList[0].movieNm}이 가져갔다`} />
+                <meta property="keyword" content={movieList.map((el)=> {return el.movieNm})} />
+                <meta property="og:image" content="https://i.ytimg.com/vi/casKW6T63Ko/maxresdefault.jpg" />
+                <meta property="og:url" content="http://localhost:8081" />    
+                {/* 19금 사이트 구글에서 검색되게 할꺼면 이거 쓰래요 ㅋㅋㅋㅋㅋㅋㅋ */}
+                <meta name="rating" content="adult" /> 
+                <meta name="rating" content="RTA-5042-1996-1400-1577-RTA" />
             </Head>
             <ul>
                 {
